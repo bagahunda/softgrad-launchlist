@@ -1,2 +1,7 @@
 mixin footer()
   +b.footer&attributes(attributes)
+    +b.status
+      p Статус: 
+        +e('span').comand запуск не рекомендован
+      p Готовность: 
+        +e('span').ready 0%

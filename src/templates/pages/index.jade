@@ -5,13 +5,15 @@ include ../blocks/scripts/scripts
 
 include ../blocks/header/header
 include ../blocks/footer/footer
+include ../blocks/launchlist/launchlist
 
 doctype html
 html(lang='ru')
   include ../blocks/head/head
   body
     +header()
-    h1 New index
+    main
+    +launchlist
     +footer()
     block scripts
-    +scripts(['build.js'])
+    +scripts(['https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js', 'build.js'])
