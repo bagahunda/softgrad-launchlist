@@ -1,3 +1,19 @@
 header
   padding 2em
   text-align center
+
+  +below(600px)
+    padding 1em
+
+.logo
+  img
+    @media screen and (max-height: 750px)
+      width 220px
+      height auto
+
+    +below(600px)
+      width 220px
+      height auto
+
+    +below(400px)
+      width 180px
