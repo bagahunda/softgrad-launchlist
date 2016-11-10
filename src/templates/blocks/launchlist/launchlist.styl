@@ -6,6 +6,10 @@
   border-radius: 4px
   background #ffffff
 
+  +below(600px)
+    box-shadow: none
+    padding 0 1em 9em
+
   li
     padding 1em 0
     display: flex
@@ -13,6 +17,12 @@
     align-items: center
     font-size: 1.3rem
     border-bottom 1px solid #065E77
+
+    +below(600px)
+      font-size: 1rem
+
+    span
+      padding-right 1em
 
   li + li
     margin-top 1em
