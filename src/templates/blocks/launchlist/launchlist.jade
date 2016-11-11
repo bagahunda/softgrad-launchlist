@@ -1,14 +1,16 @@
+include ../modals/modals
+
 mixin launchlist()
   .container
     ul.launchlist
-      li
+      li.has-help
         span Соответствие макету? (используем pixelperfect, но без фанатизма)
         .toggle
           input(type="checkbox" class="toggle__input" id="1")
           label(for="1")
             svg(width="30" height="30")
               use(xlink:href="#fire-icon")
-      li
+      li.has-help#help-doctype
         span Кодировка и DOCTYPE верные?
         .toggle
           input(type="checkbox" class="toggle__input" id="2")
@@ -72,7 +74,7 @@ mixin launchlist()
             svg(width="30" height="30")
               use(xlink:href="#fire-icon")
 
-      li
+      li.has-help
         span Сторонние JS-библиотеки грузятся из CDN?
         .toggle
           input(type="checkbox" class="toggle__input" id="10")
@@ -96,7 +98,7 @@ mixin launchlist()
             svg(width="30" height="30")
               use(xlink:href="#fire-icon")
 
-      li
+      li.has-help
         span Вёрстка не едет при незагрузившихся картинках?
         .toggle
           input(type="checkbox" class="toggle__input" id="13")
@@ -199,3 +201,5 @@ mixin launchlist()
           label(for="24")
             svg(width="30" height="30")
               use(xlink:href="#fire-icon")
+              
+  +modals()
