@@ -3,14 +3,14 @@ include ../modals/modals
 mixin launchlist()
   .container
     ul.launchlist
-      li.has-help
+      li.has-help.js-show-modal#help-pixelPerfect
         span Соответствие макету? (используем pixelperfect, но без фанатизма)
         .toggle
           input(type="checkbox" class="toggle__input" id="1")
           label(for="1")
             svg(width="30" height="30")
               use(xlink:href="#fire-icon")
-      li.has-help#help-doctype
+      li.has-help.js-show-modal#help-doctype
         span Кодировка и DOCTYPE верные?
         .toggle
           input(type="checkbox" class="toggle__input" id="2")
@@ -42,7 +42,7 @@ mixin launchlist()
             svg(width="30" height="30")
               use(xlink:href="#fire-icon")
 
-      li
+      li.has-help.js-show-modal#help-bigData
         span При вставке длинных текстов вёрстка не едет?
         .toggle
           input(type="checkbox" class="toggle__input" id="6")
@@ -74,7 +74,7 @@ mixin launchlist()
             svg(width="30" height="30")
               use(xlink:href="#fire-icon")
 
-      li.has-help
+      li.has-help.js-show-modal
         span Сторонние JS-библиотеки грузятся из CDN?
         .toggle
           input(type="checkbox" class="toggle__input" id="10")
@@ -98,7 +98,7 @@ mixin launchlist()
             svg(width="30" height="30")
               use(xlink:href="#fire-icon")
 
-      li.has-help
+      li.has-help.js-show-modal#help-imagesLoad
         span Вёрстка не едет при незагрузившихся картинках?
         .toggle
           input(type="checkbox" class="toggle__input" id="13")
@@ -106,7 +106,7 @@ mixin launchlist()
             svg(width="30" height="30")
               use(xlink:href="#fire-icon")
 
-      li
+      li.has-help.js-show-modal#help-formValidation
         span Валидация форм работает?
         .toggle
           input(type="checkbox" class="toggle__input" id="14")
@@ -114,24 +114,24 @@ mixin launchlist()
             svg(width="30" height="30")
               use(xlink:href="#fire-icon")
 
-      li
-        span Структура заголовков в порядке (H1,H2,… и т.д. и TITLE)?
+      li.has-help.js-show-modal#help-formLabels
+        span У каждого input есть label и они корректно слинкованы?
         .toggle
           input(type="checkbox" class="toggle__input" id="15")
           label(for="15")
             svg(width="30" height="30")
               use(xlink:href="#fire-icon")
 
-      li
-        span Заголовки страниц присутствуют и оптимизированы для SEO?
+      li.has-help.js-show-modal#help-inputType
+        span Использованы input, соответствующие вводимым данным?
         .toggle
           input(type="checkbox" class="toggle__input" id="16")
           label(for="16")
             svg(width="30" height="30")
               use(xlink:href="#fire-icon")
 
-      li
-        span Favicon присутствует и отображается корректно?
+      li.has-help.js-show-modal#help-titles
+        span Структура заголовков в порядке (H1,H2,… и т.д. и TITLE)?
         .toggle
           input(type="checkbox" class="toggle__input" id="17")
           label(for="17")
@@ -139,7 +139,7 @@ mixin launchlist()
               use(xlink:href="#fire-icon")
 
       li
-        span Ссылки проверены, битых ссылок нет?
+        span Заголовки страниц присутствуют и оптимизированы для SEO?
         .toggle
           input(type="checkbox" class="toggle__input" id="18")
           label(for="18")
@@ -147,7 +147,7 @@ mixin launchlist()
               use(xlink:href="#fire-icon")
 
       li
-        span Ошибок в JavaScript нет?
+        span Favicon присутствует и отображается корректно?
         .toggle
           input(type="checkbox" class="toggle__input" id="19")
           label(for="19")
@@ -155,7 +155,7 @@ mixin launchlist()
               use(xlink:href="#fire-icon")
 
       li
-        span Вёрстка отображается корректно и функционал полностью работает в IE10?
+        span Ссылки проверены, битых ссылок нет?
         .toggle
           input(type="checkbox" class="toggle__input" id="20")
           label(for="20")
@@ -163,15 +163,7 @@ mixin launchlist()
               use(xlink:href="#fire-icon")
 
       li
-        span Вёрстка отображается корректно и функционал полностью работает в Firefox (Mac & PC)?
-        .toggle
-          input(type="checkbox" class="toggle__input" id="20")
-          label(for="20")
-            svg(width="30" height="30")
-              use(xlink:href="#fire-icon")
-
-      li
-        span Вёрстка отображается корректно и функционал полностью работает в Chrome (Mac & PC)?
+        span Ошибок в JavaScript нет?
         .toggle
           input(type="checkbox" class="toggle__input" id="21")
           label(for="21")
@@ -179,7 +171,7 @@ mixin launchlist()
               use(xlink:href="#fire-icon")
 
       li
-        span Вёрстка отображается корректно и функционал полностью работает в Safari (Mac & PC)?
+        span Вёрстка отображается корректно и функционал полностью работает в IE10?
         .toggle
           input(type="checkbox" class="toggle__input" id="22")
           label(for="22")
@@ -187,7 +179,7 @@ mixin launchlist()
               use(xlink:href="#fire-icon")
 
       li
-        span Вёрстка отображается корректно и функционал полностью работает в Opera (Mac & PC)?
+        span Вёрстка отображается корректно и функционал полностью работает в Firefox (Mac & PC)?
         .toggle
           input(type="checkbox" class="toggle__input" id="23")
           label(for="23")
@@ -195,11 +187,35 @@ mixin launchlist()
               use(xlink:href="#fire-icon")
 
       li
-        span Страница 404 готова и работает корректно?
+        span Вёрстка отображается корректно и функционал полностью работает в Chrome (Mac & PC)?
         .toggle
           input(type="checkbox" class="toggle__input" id="24")
           label(for="24")
             svg(width="30" height="30")
               use(xlink:href="#fire-icon")
-              
+
+      li
+        span Вёрстка отображается корректно и функционал полностью работает в Safari (Mac & PC)?
+        .toggle
+          input(type="checkbox" class="toggle__input" id="25")
+          label(for="25")
+            svg(width="30" height="30")
+              use(xlink:href="#fire-icon")
+
+      li
+        span Вёрстка отображается корректно и функционал полностью работает в Opera (Mac & PC)?
+        .toggle
+          input(type="checkbox" class="toggle__input" id="26")
+          label(for="26")
+            svg(width="30" height="30")
+              use(xlink:href="#fire-icon")
+
+      li
+        span Страница 404 готова и работает корректно?
+        .toggle
+          input(type="checkbox" class="toggle__input" id="27")
+          label(for="27")
+            svg(width="30" height="30")
+              use(xlink:href="#fire-icon")
+
   +modals()

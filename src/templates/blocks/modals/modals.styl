@@ -8,8 +8,14 @@
   background #ffffff
   font-size: 1.3rem
   line-height: 1.7
+  transition: all 0.3s ease-in-out
+  opacity 0
+  pointer-events: none
+  overflow-y: auto
 
   &__header
+    margin-bottom 2em
+    padding 0 1em
     text-align center
     font-size: 2rem
 
@@ -18,3 +24,13 @@
     top 1em
     right 1em
     cursor: pointer
+
+  &--is-visible
+    opacity 1
+    pointer-events: auto
+
+  li:not(:last-child)
+    margin-bottom 1em
+
+.modal-shown
+  overflow: hidden

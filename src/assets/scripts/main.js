@@ -25,6 +25,17 @@
       }
     })
 
+    $('.js-show-modal span').on('click', function() {
+      var target = $(this).parent().attr('id');
+      $('.modal#'+target).addClass('modal--is-visible');
+      $('body').addClass('modal-shown');
+    })
+
+    $('.modal__close').on('click', function() {
+      $(this).parents('.modal').removeClass('modal--is-visible');
+      $('body').removeClass('modal-shown');
+    })
+
   });
 
 })(jQuery);
